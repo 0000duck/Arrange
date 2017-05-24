@@ -19,3 +19,5 @@ D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\MainForm\obj\Deb
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\MainForm\obj\Debug\MainForm.csproj.GenerateResource.Cache
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\MainForm\obj\Debug\MainForm.exe
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\MainForm\obj\Debug\MainForm.pdb
+D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\MainForm\bin\Debug\Microsoft.Kinect.dll
+D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\MainForm\bin\Debug\Microsoft.Kinect.xml

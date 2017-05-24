@@ -81,7 +81,7 @@ Public Class UcCanvas3D
 
     Public Sub Draw()
         If Opengl Is Nothing Then Return
-        Opengl.Clear(Color.White) '  SkyBlue
+        Opengl.Clear(Color.Gray) '灰色背景
         Opengl.SetSCS(ViewCS)
         GL.Clear(ClearBufferMask.ColorBufferBit)
         CS3.Draw(Materials)    ' 绘制坐标系

@@ -38,6 +38,7 @@
     <Reference Include="Controls">
       <HintPath>..\Controls\bin\Debug\Controls.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Models">
       <HintPath>..\Models\bin\Debug\Models.dll</HintPath>
     </Reference>
@@ -69,6 +70,12 @@
     <Compile Include="Arrange.Designer.cs">
       <DependentUpon>Arrange.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsBody.cs" />
+    <Compile Include="clsBodies.cs" />
+    <Compile Include="clsControl.cs" />
+    <Compile Include="clsKinect.cs" />
+    <Compile Include="clsVector3.cs" />
+    <Compile Include="constTuple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Arrange.resx">

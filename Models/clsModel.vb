@@ -4,6 +4,8 @@ Imports Commons
 Public Class clsModel
 
     Public Sub Draw(ByVal Materials As clsMaterials)
+
+        '以下模型为测试用例
         GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill)
         Materials.SetMaterial(MaterialType.ActiveBox)
         GL.Begin(PrimitiveType.Triangles)
