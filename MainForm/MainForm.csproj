@@ -70,12 +70,12 @@
     <Compile Include="Arrange.Designer.cs">
       <DependentUpon>Arrange.cs</DependentUpon>
     </Compile>
-    <Compile Include="clsBody.cs" />
-    <Compile Include="clsBodies.cs" />
-    <Compile Include="clsControl.cs" />
-    <Compile Include="clsKinect.cs" />
-    <Compile Include="clsVector3.cs" />
-    <Compile Include="constTuple.cs" />
+    <Compile Include="Kinect\clsBody.cs" />
+    <Compile Include="Kinect\clsBodies.cs" />
+    <Compile Include="Kinect\clsControl.cs" />
+    <Compile Include="Kinect\clsKinect.cs" />
+    <Compile Include="Kinect\clsVector3.cs" />
+    <Compile Include="Kinect\constTuple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Arrange.resx">

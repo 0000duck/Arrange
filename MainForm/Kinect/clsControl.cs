@@ -5,6 +5,9 @@ using System.Diagnostics;
 using System.IO;
 
 namespace MainForm {
+    /// <summary>
+    /// 整个Kinect影像
+    /// </summary>
     class clsControl {
         private clsKinect device = clsKinect.Device;
         private clsBodies bodies;

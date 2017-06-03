@@ -6,11 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MainForm {
-    class constTuples {
+    /// <summary>
+    /// 每个骨骼节点
+    /// </summary>
+    class clsBones {
         private List<Tuple<JointType, JointType>> bones;
-        private static constTuples tuple;
+        private static clsBones tuple;
         public const int count = 24;
-        private constTuples() {
+        private clsBones() {
             bones = new List<Tuple<JointType, JointType>>();
             init();
         }
@@ -53,9 +56,9 @@ namespace MainForm {
 
         }
 
-        public static constTuples getTuples() {
+        public static clsBones getTuples() {
             if (tuple == null)
-                tuple = new constTuples();
+                tuple = new clsBones();
             return tuple;
         }
 

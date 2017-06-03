@@ -4,6 +4,9 @@ using Microsoft.Kinect;
 using System.Threading.Tasks;
 
 namespace MainForm {
+    /// <summary>
+    /// 多个身体
+    /// </summary>
     class clsBodies {
         private List<clsBody> bodies = new List<clsBody>();
 
@@ -29,7 +32,7 @@ namespace MainForm {
         public void Draw() {
             if (bodies == null) {
                 return;
-            }
+            }//画每个身体
             foreach (var i in bodies) {
                 i.Draw();
             }

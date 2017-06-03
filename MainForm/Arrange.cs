@@ -7,7 +7,6 @@ namespace MainForm {
     public partial class Arrange : Form {
         clsModel Model;
         private clsControl control;
-        private int n = 0;
 
 
         public Arrange() {
@@ -49,7 +48,5 @@ namespace MainForm {
         private void On_Control_Adding(object sender, EventArgs e) {
             control.start();
         }
-
-
     }
 }

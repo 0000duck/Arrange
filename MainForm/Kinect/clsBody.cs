@@ -7,9 +7,12 @@ using OpenTK.Graphics.OpenGL;
 using static System.Math;
 
 namespace MainForm {
+    /// <summary>
+    /// 单个身体
+    /// </summary>
     public class clsBody {
         private Dictionary<JointType, clsVector3> vectors;
-        private constTuples tuples = constTuples.getTuples();
+        private clsBones tuples = clsBones.getTuples();
         private double scale;
 
         public clsBody() {
@@ -17,18 +20,20 @@ namespace MainForm {
             scale = 10;
         }
 
+        /// <summary>
+        /// 连接骨骼节点
+        /// </summary>
         public void Draw() {
             foreach (var i in vectors) {
                 i.Value.changeXYZ();
                 i.Value.Draw();
             }
 
-            clsVector3 x, y;
-            Tuple<JointType, JointType> tempTuple;
-            for (int i = 0; i < constTuples.count - 1; i++) {
-                tempTuple = tuples.getTuple(i);
-                x = vectors[tempTuple.Item1];
-                y = vectors[tempTuple.Item2];
+            for (int i = 0; i < clsBones.count - 1; i++) {
+                Tuple<JointType, JointType> tempTuple = tuples.getTuple(i);
+
+                clsVector3 x = vectors[tempTuple.Item1],//起点
+                y = vectors[tempTuple.Item2];//终点
 
                 DrawBone(x, y);
             }

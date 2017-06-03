@@ -8,24 +8,20 @@ using OpenTK.Graphics.OpenGL;
 namespace MainForm {
     public class clsVector3 {
         private Vector3 vec;
-        private double R, scale;
-        private int _p1, _p2, _p3;
+        private double scale;
 
         public clsVector3(CameraSpacePoint Position) {
             vec = new Vector3(Position.X, Position.Y, Position.Z);
-            R = 0.5;
             scale = 10;
         }
 
         public clsVector3() {
             vec = new Vector3();
-            R = 0.5;
             scale = 15;
         }
 
         public clsVector3(int p1, int p2, int p3) {
             vec = new Vector3(p1, p2, p3);
-            R = 0.5;
             scale = 15;
         }
 

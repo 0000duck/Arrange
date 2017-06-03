@@ -262,3 +262,15 @@ D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Commons\obj\Debu
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Commons\obj\Debug\Commons.dll
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Commons\obj\Debug\Commons.xml
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Commons\obj\Debug\Commons.pdb
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\bin\Debug\Commons.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\bin\Debug\Commons.pdb
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\bin\Debug\Commons.xml
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\bin\Debug\OpenTK.Compatibility.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\bin\Debug\OpenTK.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\bin\Debug\OpenTK.GLControl.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\obj\Debug\Commons.vbprojResolveAssemblyReference.cache
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\obj\Debug\Commons.Resources.resources
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\obj\Debug\Commons.vbproj.GenerateResource.Cache
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\obj\Debug\Commons.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\obj\Debug\Commons.xml
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Commons\obj\Debug\Commons.pdb

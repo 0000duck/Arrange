@@ -16,3 +16,21 @@ D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Models\obj\Debug
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Models\obj\Debug\Models.dll
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Models\obj\Debug\Models.xml
 D:\RecentHomework\CSharp\2017大创\0 三维框架 - 副本 (2)\Models\obj\Debug\Models.pdb
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Models.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Models.pdb
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Models.xml
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Commons.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Controls.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\OpenTK.Compatibility.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\OpenTK.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\OpenTK.GLControl.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Commons.pdb
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Commons.xml
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Controls.pdb
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\bin\Debug\Controls.xml
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\obj\Debug\Models.vbprojResolveAssemblyReference.cache
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\obj\Debug\Models.Resources.resources
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\obj\Debug\Models.vbproj.GenerateResource.Cache
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\obj\Debug\Models.dll
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\obj\Debug\Models.xml
+D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\Models\obj\Debug\Models.pdb
