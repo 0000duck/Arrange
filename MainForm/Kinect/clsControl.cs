@@ -3,6 +3,7 @@ using Microsoft.Kinect;
 using Controls;
 using System.Diagnostics;
 using System.IO;
+using System;
 
 namespace MainForm {
     /// <summary>
@@ -11,6 +12,7 @@ namespace MainForm {
     class clsControl {
         private clsKinect device = clsKinect.Device;
         private clsBodies bodies;
+        private List<clsBody> copycat;
         private Body[] tmps;
 
         private int index = 0;
@@ -18,14 +20,15 @@ namespace MainForm {
 
         public clsControl() {
             bodies = new clsBodies();
+            copycat = new List<clsBody>();
             device.FrameArrivedHandler += Frame_Arrived;
         }
 
-        public void start() {
+        public void Start() {
             device.Start();
         }
 
-        public void close() {
+        public void Close() {
             device.Close();
         }
 
@@ -48,23 +51,26 @@ namespace MainForm {
             foreach (var _body in tmps) {
                 if (_body.IsTracked) {
                     IReadOnlyDictionary<JointType, Joint> joints = _body.Joints;
-                    bodies.Append(joints);
+                    bodies.Append(ref joints);
                     drawGameEventHandler();
-                    Draw();
                     index += 1;
-                    //
                 }
             }
-
-
         }
+
         public void Draw() {
-            Debug.WriteLine("6");
             bodies.Draw(index);
         }
 
-        public void writeData(StreamWriter swa) {
-            swa.Write(bodies.ToString());
+        public List<Tuple<clsVector3, clsVector3>> GetSingleBodyFrame() {
+            clsBodies temp = new clsBodies();
+            try {
+                IReadOnlyDictionary<JointType, Joint> joints = tmps[0].Joints;
+                temp.Append(ref joints);
+                return temp.GetSingleBodyFrame(0);
+            } catch {
+                throw new Exception("尚未捕捉到0号身体的骨骼数据");
+            }
         }
     }
 }

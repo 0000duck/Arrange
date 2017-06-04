@@ -10,32 +10,27 @@ namespace MainForm {
     class clsBodies {
         private List<clsBody> bodies = new List<clsBody>();
 
-        public clsBody getBody(int i) {
+        public clsBody GetBody(int i) {
             if (bodies != null && i < bodies.Count && i > -1) {
                 return bodies[i];
             }
             return null;
         }
 
-        public void Append(clsBody body) {
+        public void Append(ref clsBody body) {
             bodies.Add(body);
         }
 
-        public void Append(IReadOnlyDictionary<JointType, Joint> js) {
+        public void Append(ref IReadOnlyDictionary<JointType, Joint> js) {
             clsBody tempBody = new clsBody();
             foreach (var i in js.Keys) {
                 tempBody.Append(js[i]);
             }
-            Append(tempBody);
+            Append(ref tempBody);
         }
 
         public void Draw() {
-            if (bodies == null) {
-                return;
-            }//画每个身体
-            foreach (var i in bodies) {
-                i.Draw();
-            }
+            bodies[bodies.Count - 1].Draw();
         }
 
         public void Draw(int i) {
@@ -44,6 +39,18 @@ namespace MainForm {
             if (bodies.Count <= i)
                 return;
             bodies[i].Draw();
+        }
+
+        /// <summary>
+        /// 单个身体全身数据
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public List<Tuple<clsVector3, clsVector3>> GetSingleBodyFrame(int index) {
+            if (bodies != null && index < bodies.Count && index > -1) {
+                return bodies[index].Shot();
+            }
+            return null;//
         }
 
         public override string ToString() {

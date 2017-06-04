@@ -44,3 +44,49 @@ D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\MainForm\obj\Debu
 D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\MainForm\obj\Debug\MainForm.csproj.GenerateResource.Cache
 D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\MainForm\obj\Debug\MainForm.exe
 D:\RecentHomework\CSharp\新建文件夹\Innovation-of-college\MainForm\obj\Debug\MainForm.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\MainForm.exe.config
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\MainForm.exe
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\MainForm.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Commons.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Controls.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Microsoft.Kinect.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Models.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\OpenTK.Compatibility.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\OpenTK.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\OpenTK.GLControl.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Commons.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Commons.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Controls.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Controls.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Microsoft.Kinect.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Models.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\bin\Debug\Models.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.csprojResolveAssemblyReference.cache
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.Arrange.resources
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.Properties.Resources.resources
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.csproj.GenerateResource.Cache
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.exe
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\MainForm.exe.config
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\MainForm.exe
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\MainForm.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Commons.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Controls.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Microsoft.Kinect.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Models.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\OpenTK.Compatibility.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\OpenTK.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\OpenTK.GLControl.dll
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Commons.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Commons.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Controls.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Controls.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Microsoft.Kinect.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Models.pdb
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\bin\Debug\Models.xml
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\obj\Debug\MainForm.csprojResolveAssemblyReference.cache
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\obj\Debug\MainForm.Arrange.resources
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\obj\Debug\MainForm.Properties.Resources.resources
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\obj\Debug\MainForm.csproj.GenerateResource.Cache
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\obj\Debug\MainForm.exe
+D:\RecentHomework\CSharp\2017大创\Innovation-of-college - 副本\MainForm\obj\Debug\MainForm.pdb

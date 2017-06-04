@@ -11,7 +11,7 @@ namespace MainForm {
     /// 单个身体
     /// </summary>
     public class clsBody {
-        private Dictionary<JointType, clsVector3> vectors;
+        private Dictionary<JointType, clsVector3> vectors;//骨骼转化为空间坐标点的字典
         private clsBones tuples = clsBones.getTuples();
         private double scale;
 
@@ -25,18 +25,30 @@ namespace MainForm {
         /// </summary>
         public void Draw() {
             foreach (var i in vectors) {
-                i.Value.changeXYZ();
+                i.Value.CoordinateTransform();
                 i.Value.Draw();
             }
 
             for (int i = 0; i < clsBones.count - 1; i++) {
                 Tuple<JointType, JointType> tempTuple = tuples.getTuple(i);
-
                 clsVector3 x = vectors[tempTuple.Item1],//起点
                 y = vectors[tempTuple.Item2];//终点
-
                 DrawBone(x, y);
             }
+        }
+
+        /// <summary>
+        /// 某一时刻所有骨骼节点
+        /// </summary>
+        /// <returns></returns>
+        public List<Tuple<clsVector3, clsVector3>> Shot() {
+            List<Tuple<clsVector3, clsVector3>> nodeList = new List<Tuple<clsVector3, clsVector3>>();
+            for (int i = 0; i < clsBones.count - 1; i++) {
+                Tuple<JointType, JointType> tempTuple = tuples.getTuple(i);
+                nodeList.Add(new Tuple<clsVector3, clsVector3>(vectors[tempTuple.Item1]
+                    , vectors[tempTuple.Item2]));
+            }
+            return nodeList;
         }
 
         private Vector3 mul(double a, Vector3 s) {
@@ -76,19 +88,6 @@ namespace MainForm {
 
         public void Append(Joint j) {
             vectors.Add(j.JointType, new clsVector3(j.Position));
-        }
-
-        public override string ToString() {
-            string str = "";
-
-            foreach (var i in vectors) {
-                str += i.Value.getX().ToString() + "," +
-                    i.Value.getY().ToString() + "," +
-                    i.Value.getZ().ToString();
-
-            }
-
-            return str;
         }
     }
 }

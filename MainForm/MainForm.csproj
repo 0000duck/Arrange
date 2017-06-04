@@ -75,7 +75,7 @@
     <Compile Include="Kinect\clsControl.cs" />
     <Compile Include="Kinect\clsKinect.cs" />
     <Compile Include="Kinect\clsVector3.cs" />
-    <Compile Include="Kinect\constTuple.cs" />
+    <Compile Include="Kinect\clsBones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Arrange.resx">

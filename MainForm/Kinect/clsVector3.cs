@@ -12,20 +12,26 @@ namespace MainForm {
 
         public clsVector3(CameraSpacePoint Position) {
             vec = new Vector3(Position.X, Position.Y, Position.Z);
-            scale = 10;
+            //scale = 10;
+            scale = 100;
         }
 
         public clsVector3() {
             vec = new Vector3();
-            scale = 15;
+            //scale = 15;
+            scale = 150;
         }
 
         public clsVector3(int p1, int p2, int p3) {
             vec = new Vector3(p1, p2, p3);
-            scale = 15;
+            //scale = 15;
+            scale = 150;
         }
 
-        public void changeXYZ() {
+        /// <summary>
+        /// 坐标系转换
+        /// </summary>
+        public void CoordinateTransform() {
             double temp = vec.X;
             vec.X = vec.Z;
             vec.Z = vec.Y;
