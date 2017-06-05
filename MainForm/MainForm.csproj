@@ -39,9 +39,6 @@
       <HintPath>..\Controls\bin\Debug\Controls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="Models">
-      <HintPath>..\Models\bin\Debug\Models.dll</HintPath>
-    </Reference>
     <Reference Include="OpenTK">
       <HintPath>..\OpenTK\OpenTK.dll</HintPath>
     </Reference>
@@ -76,6 +73,7 @@
     <Compile Include="Kinect\clsKinect.cs" />
     <Compile Include="Kinect\clsVector3.cs" />
     <Compile Include="Kinect\clsBones.cs" />
+    <Compile Include="Models\Frame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Arrange.resx">

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using Models;
 using System.IO;
 
 
 namespace MainForm {
     public partial class Arrange : Form {
-        clsModel Model;
+        Models.Frame frame;
         private clsControl control;
 
 
@@ -22,13 +21,23 @@ namespace MainForm {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void On_Models_Adding(object sender, EventArgs e) {
-            Model = new clsModel();
+            frame = new Models.Frame(ucCanvas3D1.Materials);
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "dat文件(*.dat)|*.dat|所有文件(*.*)|*.*";
+            openFileDialog.ValidateNames = true;
+            openFileDialog.CheckPathExists = true;
+            openFileDialog.CheckFileExists = true;
+            if (openFileDialog.ShowDialog() == DialogResult.OK) {
+                string strFileName = openFileDialog.FileName;
+                frame.GetDatFile(strFileName);
+            }
             ucCanvas3D1.Draw();
         }
 
         private void Canvas3D_DrawGame() {
-            if (Model != null)//添加模型
-                Model.Draw(ucCanvas3D1.Materials);
+            if (frame != null)
+                frame.Draw();
             if (control == null) {
                 control = new clsControl();
                 return;
@@ -49,6 +58,11 @@ namespace MainForm {
             control.Start();
         }
 
+        /// <summary>
+        /// 写dat数据文件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnRecord(object sender, EventArgs e) {
             SaveFileDialog sfd = new SaveFileDialog();
 
