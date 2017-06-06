@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Commons">
-      <HintPath>..\Controls\bin\Debug\Commons.dll</HintPath>
+      <HintPath>..\Basic\bin\Debug\Commons.dll</HintPath>
     </Reference>
     <Reference Include="Controls">
       <HintPath>..\Controls\bin\Debug\Controls.dll</HintPath>

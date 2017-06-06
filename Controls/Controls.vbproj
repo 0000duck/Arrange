@@ -46,6 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Commons">
+      <HintPath>..\Basic\bin\Debug\Commons.dll</HintPath>
+    </Reference>
     <Reference Include="OpenTK">
       <HintPath>..\OpenTK\OpenTK.dll</HintPath>
     </Reference>
@@ -121,12 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Commons\Commons.vbproj">
-      <Project>{1961CF39-75E8-407B-8AEF-243EDE31CFAA}</Project>
-      <Name>Commons</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

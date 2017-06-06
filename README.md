@@ -1,5 +1,9 @@
 #Innovation-of-college
 
+- 2017-06-06
+1. 使用C#重构Commons
+2. 坐标轴微调
+
 - 2017-06-05
 1. 添加拍照和读取dat文件的功能
 2. 添加线条绘制接口Frame
