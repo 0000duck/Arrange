@@ -29,7 +29,8 @@
             this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.开始ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.拍照ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ucCanvas3D1 = new Controls.UcCanvas3D();
+            this.键盘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel3D1 = new UcCanvas3D.Panel3D();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             this.清空ToolStripMenuItem,
             this.添加ToolStripMenuItem,
             this.开始ToolStripMenuItem,
-            this.拍照ToolStripMenuItem});
+            this.拍照ToolStripMenuItem,
+            this.键盘ToolStripMenuItem});
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             this.文件ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.文件ToolStripMenuItem.Text = "文件";
@@ -82,22 +84,30 @@
             this.拍照ToolStripMenuItem.Text = "拍照";
             this.拍照ToolStripMenuItem.Click += new System.EventHandler(this.OnRecord);
             // 
-            // ucCanvas3D1
+            // 键盘ToolStripMenuItem
             // 
-            this.ucCanvas3D1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucCanvas3D1.Location = new System.Drawing.Point(0, 28);
-            this.ucCanvas3D1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ucCanvas3D1.Name = "ucCanvas3D1";
-            this.ucCanvas3D1.Size = new System.Drawing.Size(660, 603);
-            this.ucCanvas3D1.TabIndex = 1;
-            this.ucCanvas3D1.DrawGame += new Controls.UcCanvas3D.DrawGameEventHandler(this.Canvas3D_DrawGame);
+            this.键盘ToolStripMenuItem.Name = "键盘ToolStripMenuItem";
+            this.键盘ToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
+            this.键盘ToolStripMenuItem.Text = "键盘";
+            this.键盘ToolStripMenuItem.Click += new System.EventHandler(this.OnOpeningKeyBoard);
+            // 
+            // panel3D1
+            // 
+            this.panel3D1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3D1.Location = new System.Drawing.Point(0, 28);
+            this.panel3D1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3D1.Name = "panel3D1";
+            this.panel3D1.Size = new System.Drawing.Size(660, 603);
+            this.panel3D1.TabIndex = 1;
+            this.panel3D1.DrawGame += new UcCanvas3D.Panel3D.DrawGameEventHandler(this.Canvas3D_DrawGame);
+            this.panel3D1.Resize += new System.EventHandler(this.Panel3D_Resize);
             // 
             // Arrange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 631);
-            this.Controls.Add(this.ucCanvas3D1);
+            this.Controls.Add(this.panel3D1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Arrange";
@@ -116,9 +126,9 @@
         private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 清空ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem;
-        private Controls.UcCanvas3D ucCanvas3D1;
+        private UcCanvas3D.Panel3D panel3D1;
         private System.Windows.Forms.ToolStripMenuItem 开始ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 拍照ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 键盘ToolStripMenuItem;
     }
 }
-

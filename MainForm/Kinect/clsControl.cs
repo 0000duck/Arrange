@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using Microsoft.Kinect;
-using Controls;
-using System.Diagnostics;
-using System.IO;
+﻿using Microsoft.Kinect;
 using System;
+using System.Collections.Generic;
 
 namespace MainForm {
     /// <summary>
@@ -16,7 +13,7 @@ namespace MainForm {
         private Body[] tmps;
 
         private int index = 0;
-        public event UcCanvas3D.DrawGameEventHandler drawGameEventHandler;
+        public event UcCanvas3D.Panel3D.DrawGameEventHandler drawGameEventHandler;
 
         public clsControl() {
             bodies = new clsBodies();

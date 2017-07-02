@@ -162,9 +162,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controls\Controls.vbproj">
+    <ProjectReference Include="..\Controls\UcCanvas3D.vbproj">
       <Project>{E815C2B5-36B6-4F4D-83DA-BB0E91F06C98}</Project>
-      <Name>Controls</Name>
+      <Name>UcCanvas3D</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
