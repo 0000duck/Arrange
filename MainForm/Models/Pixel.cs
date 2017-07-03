@@ -14,7 +14,7 @@ namespace MainForm.Models {
         public override void Draw() {
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
             GL.Color3(Color.Red);
-            GL.DrawPixels(1920, 1080, PixelFormat.Bgr,
+            GL.DrawPixels(imagewidth, imageheight, PixelFormat.Bgr,
                             PixelType.UnsignedByte, listOfBytes.ToArray());
         }
 
@@ -23,15 +23,10 @@ namespace MainForm.Models {
             globalMaterial = material;
             FileStream fileStream = new FileStream(path,
               FileMode.Open);
-            fileStream.Seek(0x0012, SeekOrigin.Begin);
-            /*imagewidth = fileStream.ReadByte() * 24 +
-                 fileStream.ReadByte() * 16 +
-                 fileStream.ReadByte() * 8 +
-                 fileStream.ReadByte();
-             imageheight = fileStream.ReadByte() * 24 +
-                 fileStream.ReadByte() * 16 +
-                 fileStream.ReadByte() * 8 +
-                 fileStream.ReadByte();*/
+            Bitmap bit = new Bitmap(fileStream);
+            imageheight = bit.Height;
+            imagewidth = bit.Width;
+            fileStream.Seek(54, SeekOrigin.Begin);
             listOfBytes = new List<byte>();
             int bs;
             while ((bs = fileStream.ReadByte()) != -1) {

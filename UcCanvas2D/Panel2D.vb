@@ -43,6 +43,7 @@ Public Class Panel2D
         MousePressed = False
     End Sub
     Private Sub glCanvas_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles glCanvas.MouseMove
+
         ' 右键：返回
         If e.Button = System.Windows.Forms.MouseButtons.Right Then Return
         If MousePressed = False Then Exit Sub
