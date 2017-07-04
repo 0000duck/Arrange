@@ -68,15 +68,23 @@
     <Compile Include="Arrange.Designer.cs">
       <DependentUpon>Arrange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gesture\JointVector.cs" />
+    <Compile Include="Gesture\RightHandLocation.cs" />
+    <Compile Include="Gesture\NodeLocation.cs" />
+    <Compile Include="Gesture\WholeJointLocation.cs" />
     <Compile Include="Kinect\clsBody.cs" />
     <Compile Include="Kinect\clsBodies.cs" />
     <Compile Include="Kinect\clsControl.cs" />
+    <Compile Include="Kinect\clsControl2D.cs" />
     <Compile Include="Kinect\clsKinect.cs" />
     <Compile Include="Kinect\clsVector3.cs" />
     <Compile Include="Kinect\clsBones.cs" />
     <Compile Include="Models\Frame.cs" />
     <Compile Include="Models\Pixel.cs" />
+    <Compile Include="Models\Point.cs" />
     <Compile Include="Models\Strip.cs" />
+    <Compile Include="Models\TestShape.cs" />
+    <Compile Include="Models\Texture.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubForms\KeyBoardForm.cs">
@@ -113,9 +121,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UcCanvas3D\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\UcCanvas2D\UcCanvas2D.vbproj">
       <Project>{4259451F-F418-4220-9F3D-4F162838447E}</Project>

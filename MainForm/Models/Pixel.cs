@@ -1,20 +1,30 @@
 ﻿using Commons;
 using OpenTK.Graphics.OpenGL;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 
 namespace MainForm.Models {
     public class Pixel : Frame {
-        int imagewidth, imageheight;
+        private int imagewidth, imageheight;
         string path;
         clsMaterials globalMaterial;
         List<byte> listOfBytes;
 
+        public int ImageWidth { get => imagewidth; set => imagewidth = value; }
+        public int ImageHeight { get => imageheight; set => imageheight = value; }
+
         public override void Draw() {
+            throw new NotImplementedException();
+        }
+
+        public override void Draw2D() {
+            globalMaterial = new clsMaterials();
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
+            globalMaterial.SetMaterial(MaterialType.ActiveBox);
             GL.Color3(Color.Red);
-            GL.DrawPixels(imagewidth, imageheight, PixelFormat.Bgr,
+            GL.DrawPixels(ImageWidth, ImageHeight, PixelFormat.Bgr,
                             PixelType.UnsignedByte, listOfBytes.ToArray());
         }
 
@@ -24,8 +34,8 @@ namespace MainForm.Models {
             FileStream fileStream = new FileStream(path,
               FileMode.Open);
             Bitmap bit = new Bitmap(fileStream);
-            imageheight = bit.Height;
-            imagewidth = bit.Width;
+            ImageHeight = bit.Height;
+            ImageWidth = bit.Width;
             fileStream.Seek(54, SeekOrigin.Begin);
             listOfBytes = new List<byte>();
             int bs;

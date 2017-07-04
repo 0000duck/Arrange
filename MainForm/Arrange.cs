@@ -14,7 +14,6 @@ namespace MainForm {
             control = new clsControl();
             control.drawGameEventHandler += Control_DrawGame;
             widthRate = panel3D1.Width / Size.Width;
-
         }
 
         /// <summary>

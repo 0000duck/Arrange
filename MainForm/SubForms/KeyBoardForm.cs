@@ -2,19 +2,18 @@
 
 namespace MainForm.SubForms {
     public partial class KeyBoardForm : Form {
-        private clsControl control;
-        Models.Pixel pix;
+        private Kinect.clsControl2D control;
+        private Models.Texture tex;
+        private Models.TestShape test;
 
         public KeyBoardForm() {
             InitializeComponent();
-            control = new clsControl();
+            control = new Kinect.clsControl2D();
             control.drawGameEventHandler += Control_DrawGame;
-
-            pix = new Models.Pixel(
-                @"C:\Users\Siyu\Pictures\1.bmp",
-                panel2D1.Materials);
-            //throw new Exception("尚未确定键盘图案");
-            pix.Draw();
+            tex = new Models.Texture(@"../../../大软键盘.bmp");
+            Height = tex.ImageHeight;
+            Width = tex.ImageWidth;
+            test = new Models.TestShape();
             panel2D1.Draw();
         }
 
@@ -23,10 +22,11 @@ namespace MainForm.SubForms {
         }
 
         private void Canvas2D_DrawGame() {
-            if (pix != null)
-                pix.Draw();
+            if (tex != null)
+                tex.Draw2D();
+            test.Draw2D();
             if (control == null) {
-                control = new clsControl();
+                control = new Kinect.clsControl2D();
                 return;
             }
             control.Draw();

@@ -10,7 +10,7 @@ namespace MainForm.Models {
     /// <summary>
     /// 绘制简单自定图形框架
     /// </summary>
-    public class Strip : Frame {
+    public partial class Strip : Frame {
         clsMaterials globalMaterial;
         List<Tuple<Vector3, Vector3>> nets;
 
@@ -30,6 +30,10 @@ namespace MainForm.Models {
                             ori.Z.ToString() + " " + tar.X.ToString() + "," + tar.Y.ToString() +
                             "," + tar.Z.ToString());
             }
+        }
+
+        public override void Draw2D() {
+            throw new NotImplementedException();
         }
 
         /// <summary>

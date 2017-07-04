@@ -1,22 +1,23 @@
-﻿using Microsoft.Kinect;
+﻿using Commons;
+using Microsoft.Kinect;
 using System;
 using System.Collections.Generic;
 
-namespace MainForm {
-    /// <summary>
-    /// 整个Kinect影像
-    /// </summary>
-    class clsControl {
+namespace MainForm.Kinect {
+    class clsControl2D {
         private clsKinect device = clsKinect.Device;
         private clsBodies bodies;
         private Body[] tmps;
-
+        clsMaterials material;
+        Gesture.RightHandLocation rightHand;
         private int index = 0;
         public event UcCanvas3D.Panel3D.DrawGameEventHandler drawGameEventHandler;
 
-        public clsControl() {
+        public clsControl2D() {
             bodies = new clsBodies();
             device.FrameArrivedHandler += Frame_Arrived;
+            material = new clsMaterials();
+            rightHand = new Gesture.RightHandLocation(tmps, material);
         }
 
         public void Start() {
@@ -36,7 +37,6 @@ namespace MainForm {
                     }
                     bodyframe.GetAndRefreshBodyData(tmps);
                     dataReceived = true;
-
                 }
             }
 
@@ -55,6 +55,7 @@ namespace MainForm {
 
         public void Draw() {
             bodies.Draw(index);
+            rightHand.Draw2D();//TODO: 测试
         }
 
         public List<Tuple<clsVector3, clsVector3>> GetSingleBodyFrame() {
