@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Math;
-using OpenTK;
+﻿using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using System.Drawing;
+using static System.Math;
 
 namespace Commons {
     public class clsOpenGL {
@@ -27,7 +22,6 @@ namespace Commons {
             GL.Enable(EnableCap.Blend);//色彩混合开关
             GL.BlendFunc(BlendingFactorSrc.SrcAlpha,
                 BlendingFactorDest.OneMinusSrcAlpha);//解决透明面的色彩混合
-
             GL.LineWidth(1);
             GL.Enable(EnableCap.LineSmooth);//  '线平滑
             GL.Enable(EnableCap.PolygonSmooth);
@@ -41,7 +35,6 @@ namespace Commons {
             GL.Enable(EnableCap.Lighting);
             GL.ShadeModel(ShadingModel.Smooth);
             GL.Hint(HintTarget.PerspectiveCorrectionHint, HintMode.Nicest);
-
             SetProjection3();
         }
 
@@ -66,7 +59,16 @@ namespace Commons {
             GL.MatrixMode(MatrixMode.Modelview);
             GL.LoadIdentity();
             Matrix4 lookat = Matrix4.LookAt(SCS.Vp, SCS.Origin,
-                SCS.Up);
+               SCS.Up);
+            GL.LoadMatrix(ref lookat);
+        }
+
+        public void SetSCS() {
+            GL.MatrixMode(MatrixMode.Modelview);
+            GL.LoadIdentity();
+            Matrix4 lookat = Matrix4.LookAt(new Vector3(0, 0, 500),
+                new Vector3(0, 0, 0),
+             new Vector3(0, 1, 0));
             GL.LoadMatrix(ref lookat);
         }
     }

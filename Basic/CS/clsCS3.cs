@@ -1,10 +1,10 @@
-﻿using System;
+﻿using OpenTK.Graphics.OpenGL;
+using System;
 using static OpenTK.Graphics.Glu;
-using OpenTK.Graphics.OpenGL;
 
 namespace Commons {
     public class clsCS3 {
-        private const double SphereRadius = 0.002;//原点半径
+        private const double SphereRadius = 0.02;//原点半径
         private const double AxisRadius = 0.0025;//轴半径
         private const double AxisHeight = 1;//轴长度
         private const double ArrowHeight = 0.1;//箭头长度

@@ -8,6 +8,11 @@ namespace MainForm.Models {
         private int R;
         Vector3 point;
         clsMaterials globalMaterial;
+
+        public float X { get => point.X; set => point.X = value; }
+        public float Y { get => point.Y; set => point.Y = value; }
+        public float Z { get => point.Z; set => point.Z = value; }
+
         public override void Draw() {
             IntPtr pObj = OpenTK.Graphics.Glu.NewQuadric();
             double _SphereRadius = 1;
@@ -20,15 +25,25 @@ namespace MainForm.Models {
         }
 
         public override void Draw2D() {
+            GL.Enable(EnableCap.Lighting);
+            GL.Enable(EnableCap.Blend);
+            GL.Enable(EnableCap.DepthTest);
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
             globalMaterial.SetMaterial(MaterialType.ActiveBox);
-            GL.Begin(PrimitiveType.Points);
-            for (int i = 0; i < 6; ++i) {
-                GL.Vertex2(5 * Math.Cos(2 * Math.PI / 6 * i), R *
-                    Math.Sin(2 * Math.PI / 6 * i));
-            }
+            //GL.Begin(PrimitiveType.TriangleStrip);
+            //for (int i = 0; i < 30; ++i) {
+            //    GL.Vertex2(R * Math.Cos(2 * Math.PI / 6 * i) + X / 4, R *
+            //        Math.Sin(2 * Math.PI / 6 * i) + Y / 4);
+            //}
+            //GL.End();
+            //GL.MatrixMode(MatrixMode.Projection);
+            //GL.PushMatrix();
+            GL.Begin(PrimitiveType.LineStrip);
+            GL.Vertex2(0, 0);
+            GL.Vertex2(X, Y);
             GL.End();
-            GL.Flush();
+            //GL.PopMatrix();
+            // GL.Flush();
         }
 
         public Point(Vector3 p, clsMaterials material) {
@@ -39,11 +54,19 @@ namespace MainForm.Models {
 
         public Point(Vector2 p, clsMaterials material) {
             point = new Vector3(p.X, p.Y, 0);
+            globalMaterial = material;
+            R = 5;
+        }
+
+        public Point(Vector2 p) {
+            point = new Vector3(p.X, p.Y, 0);
+            globalMaterial = new clsMaterials();
             R = 5;
         }
 
         public Point(JointVector p, clsMaterials material) {
             point = new Vector3(p.X, p.Y, p.Z);
+            globalMaterial = material;
             R = 5;
         }
     }

@@ -18,6 +18,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commons", "Basic\Commons.cs
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UcCanvas2D", "UcCanvas2D\UcCanvas2D.vbproj", "{4259451F-F418-4220-9F3D-4F162838447E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B6278B26-6A8B-47BE-9457-D98E8FB26CE7}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		大软键盘.bmp = 大软键盘.bmp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

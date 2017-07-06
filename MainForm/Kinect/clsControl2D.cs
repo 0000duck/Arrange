@@ -12,6 +12,9 @@ namespace MainForm.Kinect {
         Gesture.RightHandLocation rightHand;
         private int index = 0;
         public event UcCanvas3D.Panel3D.DrawGameEventHandler drawGameEventHandler;
+        private string dataInfo;
+
+        public string DataInfo { get => dataInfo; }
 
         public clsControl2D() {
             bodies = new clsBodies();
@@ -55,7 +58,11 @@ namespace MainForm.Kinect {
 
         public void Draw() {
             bodies.Draw(index);
-            rightHand.Draw2D();//TODO: 测试
+            if (tmps != null) {
+                rightHand.Joint = tmps[0].Joints[JointType.HandRight];
+                dataInfo = "右手位置：(" + rightHand.X + "," + rightHand.Y + ")";
+                rightHand.Draw2D();//TODO: 测试
+            }
         }
 
         public List<Tuple<clsVector3, clsVector3>> GetSingleBodyFrame() {
