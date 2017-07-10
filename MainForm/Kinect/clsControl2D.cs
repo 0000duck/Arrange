@@ -3,6 +3,7 @@ using Microsoft.Kinect;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace MainForm.Kinect {
     class clsControl2D {
@@ -16,6 +17,8 @@ namespace MainForm.Kinect {
         private string dataInfo;
         private int hitTimes, counter, sensitivity;
         private Queue<float> track;
+        private SubForms.KeyBoardData keyBoard;
+        private string keyText;
 
         /// <summary>
         /// 坐标信息
@@ -37,6 +40,8 @@ namespace MainForm.Kinect {
         /// </summary>
         public int Sensitivity { get => sensitivity; set => sensitivity = value; }
 
+        public string KeyText { get => keyText; }
+
         public clsControl2D() {
             bodies = new clsBodies();
             device.FrameArrivedHandler += Frame_Arrived;
@@ -44,6 +49,8 @@ namespace MainForm.Kinect {
             rightHand = new Gesture.RightHandLocation(tmps, material);
             track = new Queue<float>();
             sensitivity = 20;
+            keyBoard = new SubForms.KeyBoardData(
+                @"D:\RecentHomework\2017大创\Innovation-of-college\MainForm\SubForms\KeysPosition.xml");
         }
 
         /// <summary>
@@ -90,6 +97,24 @@ namespace MainForm.Kinect {
             }
         }
 
+        private void SendSingleKey() {
+            keyText = keyBoard.Search(new Models.Point(
+                            rightHand.X, rightHand.Y));
+            switch (keyText) {
+                // TODO:功能键区
+                case "rightArrow": break;
+                case "leftArrow": break;
+                case "upArrow": break;
+                case "downArrow": break;
+                case "closeKey": break;
+                case "start": break;
+                case "close": break;
+                case "chinese": break;
+                case "english": break;
+                default: SendKeys.Send(keyText); break;
+            }
+        }
+
         /// <summary>
         /// 记录轨迹数组
         /// </summary>
@@ -102,11 +127,14 @@ namespace MainForm.Kinect {
             }
             float tmp = GetVariance();
             // Debug.WriteLine(tmp);
+            // 点击条件
             if (tmp > sensitivity) {
                 counter += 1;
+                // 来回挥手算是一次点击
                 if (counter >= 2) {
                     hitTimes += 1;
                     counter = 0;
+                    SendSingleKey();
                 }
                 Debug.WriteLine("点击次数" + hitTimes);
                 for (int i = 0; i < track.Count; i++) {

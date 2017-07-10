@@ -64,6 +64,11 @@ namespace MainForm.Models {
             R = 5;
         }
 
+        public Point(float x, float y) {
+            point = new Vector3(x, y, 0);
+            globalMaterial = new clsMaterials();
+        }
+
         public Point(JointVector p, clsMaterials material) {
             point = new Vector3(p.X, p.Y, p.Z);
             globalMaterial = material;
