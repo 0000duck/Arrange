@@ -18,13 +18,16 @@ namespace MainForm.SubForms {
             test = new Models.TestShape();
             point = new Models.Point(new Vector2(0, 0));
             panel2D1.Draw();
+            control.Start();
+        }
+
+        ~KeyBoardForm() {
+            control.Close();
         }
 
         private void Control_DrawGame() {
             panel2D1.Draw();
-            Text = "(" + point.X + "," + point.Y
-                + ")窗口宽度" + Width + "，窗口长度" + Height
-                + control.DataInfo;//kinect数据输出
+            toolStripStatusLabel1.Text = control.DataInfo;
         }
 
         private void Canvas2D_DrawGame() {
@@ -34,13 +37,10 @@ namespace MainForm.SubForms {
             point.Y /= 1.2f;
 
             Text = "(" + point.X + "," + point.Y
-                + ")窗口宽度" + Width + "，窗口长度" + Height +
-                control.DataInfo;
-
+                + ")窗口宽度" + Width + "，窗口长度" + Height;
 
             if (tex != null)
                 tex.Draw2D();
-            test.Draw2D();
             point.Draw2D();
 
             if (control == null) {

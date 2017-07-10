@@ -9,9 +9,13 @@ namespace MainForm {
     class clsControl {
         private clsKinect device = clsKinect.Device;
         private clsBodies bodies;
-        private Body[] tmps;
+        private Body[] bodiesAmount;
+
 
         private int index = 0;
+
+        public Body[] BodiesAmount { get => BodiesAmount; set => BodiesAmount = value; }
+
         public event UcCanvas3D.Panel3D.DrawGameEventHandler drawGameEventHandler;
 
         public clsControl() {
@@ -31,10 +35,10 @@ namespace MainForm {
             bool dataReceived = false;
             using (BodyFrame bodyframe = e.FrameReference.AcquireFrame()) {
                 if (bodyframe != null) {
-                    if (tmps == null) {
-                        tmps = new Body[bodyframe.BodyCount];
+                    if (bodiesAmount == null) {
+                        bodiesAmount = new Body[bodyframe.BodyCount];
                     }
-                    bodyframe.GetAndRefreshBodyData(tmps);
+                    bodyframe.GetAndRefreshBodyData(bodiesAmount);
                     dataReceived = true;
 
                 }
@@ -43,7 +47,7 @@ namespace MainForm {
             if (!dataReceived)
                 return;
 
-            foreach (var _body in tmps) {
+            foreach (var _body in bodiesAmount) {
                 if (_body.IsTracked) {
                     IReadOnlyDictionary<JointType, Joint> joints = _body.Joints;
                     bodies.Append(ref joints);
@@ -60,7 +64,7 @@ namespace MainForm {
         public List<Tuple<clsVector3, clsVector3>> GetSingleBodyFrame() {
             clsBodies temp = new clsBodies();
             try {
-                IReadOnlyDictionary<JointType, Joint> joints = tmps[0].Joints;
+                IReadOnlyDictionary<JointType, Joint> joints = bodiesAmount[0].Joints;
                 temp.Append(ref joints);
                 return temp.GetSingleBodyFrame(0);
             } catch {

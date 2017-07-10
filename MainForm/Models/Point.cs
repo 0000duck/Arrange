@@ -29,21 +29,21 @@ namespace MainForm.Models {
             GL.Enable(EnableCap.Blend);
             GL.Enable(EnableCap.DepthTest);
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
-            globalMaterial.SetMaterial(MaterialType.ActiveBox);
+            globalMaterial.SetMaterial(MaterialType.AxisY);
             //GL.Begin(PrimitiveType.TriangleStrip);
             //for (int i = 0; i < 30; ++i) {
             //    GL.Vertex2(R * Math.Cos(2 * Math.PI / 6 * i) + X / 4, R *
             //        Math.Sin(2 * Math.PI / 6 * i) + Y / 4);
             //}
             //GL.End();
-            //GL.MatrixMode(MatrixMode.Projection);
-            //GL.PushMatrix();
             GL.Begin(PrimitiveType.LineStrip);
-            GL.Vertex2(0, 0);
-            GL.Vertex2(X, Y);
+            GL.Vertex2(X - 3, Y);
+            GL.Vertex2(X + 3, Y);
             GL.End();
-            //GL.PopMatrix();
-            // GL.Flush();
+            GL.Begin(PrimitiveType.LineStrip);
+            GL.Vertex2(X, Y + 10);
+            GL.Vertex2(X, Y - 10);
+            GL.End();
         }
 
         public Point(Vector3 p, clsMaterials material) {

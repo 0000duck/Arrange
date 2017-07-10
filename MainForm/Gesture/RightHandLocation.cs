@@ -10,6 +10,7 @@ namespace MainForm.Gesture {
         public float X { get => jointVector.X; set => jointVector.X = value; }
         public float Y { get => jointVector.Y; set => jointVector.Y = value; }
         public float Z { get => jointVector.Z; set => jointVector.Z = value; }
+
         public Joint Joint;
 
         public RightHandLocation(Body body) {
@@ -35,8 +36,11 @@ namespace MainForm.Gesture {
                     bodys[0].Joints;
                 jointVector = new JointVector(
                     joints[JointType.HandRight].Position);
+            } else {
+                jointVector = new JointVector();
             }
             globalMaterial = materials;
+            point = new Models.Point(jointVector, globalMaterial);
         }
 
         public RightHandLocation() { }
@@ -47,11 +51,12 @@ namespace MainForm.Gesture {
         }
 
         public override void Draw2D() {
-            jointVector.X = Joint.Position.X;
-            jointVector.Y = Joint.Position.Y;
-            jointVector.CoordinateTransform();
-            point.X = jointVector.X;
-            point.Y = jointVector.Y;
+            point.X = 100 * Joint.Position.X;
+            point.Y = 100 * Joint.Position.Y;
+            point.Z = 100 * Joint.Position.Z;
+            jointVector.X = 100 * Joint.Position.X;
+            jointVector.Y = 100 * Joint.Position.Y;
+            jointVector.Z = 100 * Joint.Position.Z;
             point.Draw2D();
         }
     }

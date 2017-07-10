@@ -106,3 +106,5 @@ D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\UcCanvas2D
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\UcCanvas2D.pdb
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\UcCanvas2D.xml
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.SubForms.KeyBoardForm.resources
+D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\CSkin.dll
+D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\CSkin.xml

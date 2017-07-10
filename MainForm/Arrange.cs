@@ -23,7 +23,6 @@ namespace MainForm {
         /// <param name="e"></param>
         private void On_Models_Adding(object sender, EventArgs e) {
             frame = new Models.Strip(panel3D1.Materials);
-
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "dat文件(*.dat)|*.dat|所有文件(*.*)|*.*";
             openFileDialog.ValidateNames = true;
@@ -66,7 +65,6 @@ namespace MainForm {
         /// <param name="e"></param>
         private void OnRecord(object sender, EventArgs e) {
             SaveFileDialog sfd = new SaveFileDialog();
-
             StreamWriter streamwriter;
             sfd.InitialDirectory = "E:\\";
             sfd.Filter = "dat文件(*.dat)|*.dat";
