@@ -1,0 +1,14 @@
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\Canvas3D.dll
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\Canvas3D.pdb
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\Commons.dll
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\Microsoft.Kinect.dll
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\OpenTK.Compatibility.dll
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\OpenTK.dll
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\OpenTK.GLControl.dll
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\Commons.pdb
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\bin\Debug\Microsoft.Kinect.xml
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\obj\Debug\Canvas3D.Panel3D.resources
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\obj\Debug\Canvas3D.csproj.GenerateResource.Cache
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\obj\Debug\Canvas3D.dll
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\obj\Debug\Canvas3D.pdb
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas3D\obj\Debug\Canvas3D.csprojResolveAssemblyReference.cache

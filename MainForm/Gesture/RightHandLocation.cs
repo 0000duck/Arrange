@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace MainForm.Gesture {
     class RightHandLocation : NodeLocation {
-        private Models.Point point;
+        private MainForm.Models.Point point;
         private JointVector jointVector;
-        private clsMaterials globalMaterial;
+        private GlobalMaterials globalMaterial;
         public float X { get => jointVector.X; set => jointVector.X = value; }
         public float Y { get => jointVector.Y; set => jointVector.Y = value; }
         public float Z { get => jointVector.Z; set => jointVector.Z = value; }
@@ -18,11 +18,11 @@ namespace MainForm.Gesture {
                 = body.Joints;
             jointVector = new JointVector(
                   joints[JointType.HandRight].Position);
-            globalMaterial = new clsMaterials();
-            point = new Models.Point(jointVector, globalMaterial);
+            globalMaterial = new GlobalMaterials();
+            point = new MainForm.Models.Point(jointVector, globalMaterial);
         }
 
-        public RightHandLocation(Body body, clsMaterials materials) {
+        public RightHandLocation(Body body, GlobalMaterials materials) {
             IReadOnlyDictionary<JointType, Joint> joints
                 = body.Joints;
             jointVector = new JointVector(
@@ -30,7 +30,7 @@ namespace MainForm.Gesture {
             globalMaterial = materials;
         }
 
-        public RightHandLocation(Body[] bodys, clsMaterials materials) {
+        public RightHandLocation(Body[] bodys, GlobalMaterials materials) {
             if (bodys != null) {
                 IReadOnlyDictionary<JointType, Joint> joints =
                     bodys[0].Joints;

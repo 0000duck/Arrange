@@ -36,8 +36,7 @@ namespace MainForm {
         }
 
         public void Draw() {
-            clsMaterials Materials = new clsMaterials();
-            Materials.SetMaterial(MaterialType.AxisOrgin);
+            GlobalMaterials.SetMaterial(MaterialType.AxisOrgin);
             IntPtr pObj = NewQuadric();
             double _SphereRadius = 0.5;
             GL.Flush();

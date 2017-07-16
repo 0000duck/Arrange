@@ -11,7 +11,6 @@ namespace MainForm.Models {
     /// 绘制简单自定图形框架
     /// </summary>
     public partial class Strip : Frame {
-        clsMaterials globalMaterial;
         List<Tuple<Vector3, Vector3>> nets;
 
         /// <summary>
@@ -19,7 +18,7 @@ namespace MainForm.Models {
         /// </summary>
         public override void Draw() {
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
-            globalMaterial.SetMaterial(MaterialType.ActiveBox);
+            GlobalMaterials.SetMaterial(MaterialType.ActiveBox);
             for (int i = 0; i < nets.Count; i++) {
                 Vector3 ori = nets[i].Item1 * 100,
                     tar = nets[i].Item2 * 100;
@@ -87,21 +86,13 @@ namespace MainForm.Models {
             }
         }
 
-        public Strip(string path, clsMaterials material) {
+        public Strip(string path) {
             nets = new List<Tuple<Vector3, Vector3>>();
-            globalMaterial = material;
-            globalMaterial = new clsMaterials();
             GetDatFile(path);
-        }
-
-        public Strip(clsMaterials material) {
-            nets = new List<Tuple<Vector3, Vector3>>();
-            globalMaterial = material;
         }
 
         public Strip() {
             nets = new List<Tuple<Vector3, Vector3>>();
-            globalMaterial = new clsMaterials();
         }
     }
 }

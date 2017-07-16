@@ -22,7 +22,7 @@ namespace MainForm {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void On_Models_Adding(object sender, EventArgs e) {
-            frame = new Models.Strip(panel3D1.Materials);
+            frame = new Models.Strip();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "dat文件(*.dat)|*.dat|所有文件(*.*)|*.*";
             openFileDialog.ValidateNames = true;

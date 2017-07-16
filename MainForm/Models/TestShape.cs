@@ -4,7 +4,7 @@ using System;
 
 namespace MainForm.Models {
     class TestShape : Frame {
-        clsMaterials material;
+        GlobalMaterials material;
         public override void Draw() {
             throw new NotImplementedException();
         }
@@ -14,7 +14,7 @@ namespace MainForm.Models {
             GL.Enable(EnableCap.Blend);
             GL.Enable(EnableCap.DepthTest);
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
-            material.SetMaterial(MaterialType.ActiveBox);
+            GlobalMaterials.SetMaterial(MaterialType.ActiveBox);
             GL.Begin(PrimitiveType.LineStrip);
             GL.Vertex2(11, 11);
             GL.Vertex2(21, 11);
@@ -23,12 +23,12 @@ namespace MainForm.Models {
             GL.End();
         }
 
-        public TestShape(clsMaterials material) {
+        public TestShape(GlobalMaterials material) {
             this.material = material;
         }
 
         public TestShape() {
-            material = new clsMaterials();
+            material = new GlobalMaterials();
         }
     }
 }

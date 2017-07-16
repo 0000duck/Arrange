@@ -96,13 +96,11 @@
             // 
             // panel3D1
             // 
-            this.panel3D1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3D1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3D1.Location = new System.Drawing.Point(0, 28);
             this.panel3D1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3D1.Name = "panel3D1";
-            this.panel3D1.Size = new System.Drawing.Size(461, 581);
+            this.panel3D1.Size = new System.Drawing.Size(589, 583);
             this.panel3D1.TabIndex = 1;
             this.panel3D1.DrawGame += new UcCanvas3D.Panel3D.DrawGameEventHandler(this.Canvas3D_DrawGame);
             this.panel3D1.Resize += new System.EventHandler(this.Panel3D_Resize);
@@ -121,7 +119,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Arrange";
             this.Text = "Form1";
-            //this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnQuit);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

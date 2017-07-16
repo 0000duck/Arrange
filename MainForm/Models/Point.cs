@@ -7,7 +7,7 @@ namespace MainForm.Models {
     public class Point : Frame {
         private int R;
         Vector3 point;
-        clsMaterials globalMaterial;
+        GlobalMaterials globalMaterial;
 
         public float X { get => point.X; set => point.X = value; }
         public float Y { get => point.Y; set => point.Y = value; }
@@ -29,7 +29,8 @@ namespace MainForm.Models {
             GL.Enable(EnableCap.Blend);
             GL.Enable(EnableCap.DepthTest);
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
-            globalMaterial.SetMaterial(MaterialType.AxisY);
+            GlobalMaterials.SetMaterial(MaterialType.AxisY);
+
             //GL.Begin(PrimitiveType.TriangleStrip);
             //for (int i = 0; i < 30; ++i) {
             //    GL.Vertex2(R * Math.Cos(2 * Math.PI / 6 * i) + X / 4, R *
@@ -46,13 +47,13 @@ namespace MainForm.Models {
             GL.End();
         }
 
-        public Point(Vector3 p, clsMaterials material) {
+        public Point(Vector3 p, GlobalMaterials material) {
             point = p;
             globalMaterial = material;
             R = 5;
         }
 
-        public Point(Vector2 p, clsMaterials material) {
+        public Point(Vector2 p, GlobalMaterials material) {
             point = new Vector3(p.X, p.Y, 0);
             globalMaterial = material;
             R = 5;
@@ -60,16 +61,16 @@ namespace MainForm.Models {
 
         public Point(Vector2 p) {
             point = new Vector3(p.X, p.Y, 0);
-            globalMaterial = new clsMaterials();
+            globalMaterial = new GlobalMaterials();
             R = 5;
         }
 
         public Point(float x, float y) {
             point = new Vector3(x, y, 0);
-            globalMaterial = new clsMaterials();
+            globalMaterial = new GlobalMaterials();
         }
 
-        public Point(JointVector p, clsMaterials material) {
+        public Point(MainForm.JointVector p, GlobalMaterials material) {
             point = new Vector3(p.X, p.Y, p.Z);
             globalMaterial = material;
             R = 5;

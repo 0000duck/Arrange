@@ -130,11 +130,5 @@
   <ItemGroup>
     <Content Include="SubForms\KeysPosition.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UcCanvas2D\UcCanvas2D.vbproj">
-      <Project>{4259451F-F418-4220-9F3D-4F162838447E}</Project>
-      <Name>UcCanvas2D</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

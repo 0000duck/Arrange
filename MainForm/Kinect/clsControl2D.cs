@@ -6,18 +6,16 @@ using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace MainForm.Kinect {
-    class clsControl2D {
+    public class clsControl2D {
         private clsKinect device = clsKinect.Device;
-        private clsBodies bodies;
         private Body[] tmps;
-        clsMaterials material;
+        GlobalMaterials material;
         Gesture.RightHandLocation rightHand;
-        private int index = 0;
-        public event UcCanvas3D.Panel3D.DrawGameEventHandler drawGameEventHandler;
+        public event UcCanvas2D.Panel2D.DrawGameEventHandler drawGameEventHandler;
         private string dataInfo;
         private int hitTimes, counter, sensitivity;
         private Queue<float> track;
-        private SubForms.KeyBoardData keyBoard;
+        private MainForm.SubForms.KeyBoardData keyBoard;
         private string keyText;
 
         /// <summary>
@@ -43,9 +41,8 @@ namespace MainForm.Kinect {
         public string KeyText { get => keyText; }
 
         public clsControl2D() {
-            bodies = new clsBodies();
             device.FrameArrivedHandler += Frame_Arrived;
-            material = new clsMaterials();
+            material = new GlobalMaterials();
             rightHand = new Gesture.RightHandLocation(tmps, material);
             track = new Queue<float>();
             sensitivity = 20;
@@ -90,9 +87,7 @@ namespace MainForm.Kinect {
             foreach (var _body in tmps) {
                 if (_body.IsTracked) {
                     IReadOnlyDictionary<JointType, Joint> joints = _body.Joints;
-                    bodies.Append(ref joints);
                     drawGameEventHandler();
-                    index += 1;
                 }
             }
         }
@@ -165,7 +160,7 @@ namespace MainForm.Kinect {
         public void Draw() {
             if (tmps != null) {
                 rightHand.Joint = tmps[0].Joints[JointType.HandRight];
-                dataInfo = "右手位置：(" + rightHand.X + "," + rightHand.Y + ")";
+                dataInfo = string.Concat("右手位置：(", rightHand.X, ",", rightHand.Y, ")");
                 GetTrack();
                 rightHand.Draw2D();
             }

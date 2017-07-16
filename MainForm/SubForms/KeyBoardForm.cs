@@ -36,17 +36,12 @@ namespace MainForm.SubForms {
             point.X /= 4.6f;
             point.Y /= 1.2f;
 
-            Text = "(" + point.X + "," + point.Y
-                + ")窗口宽度" + Width + "，窗口长度" + Height;
+            Text = string.Concat("(", point.X, ",", point.Y
+                , ")窗口宽度", Width, "，窗口长度", Height);
 
             if (tex != null)
                 tex.Draw2D();
             point.Draw2D();
-
-            if (control == null) {
-                control = new Kinect.clsControl2D();
-                return;
-            }
             control.Draw();
         }
     }

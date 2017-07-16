@@ -4,7 +4,7 @@ using System.IO;
 using System.Xml;
 
 namespace MainForm.SubForms {
-    class KeyBoardData {
+    public class KeyBoardData {
         private class EachKey {
             private Models.Point rightDown;
             private string content;

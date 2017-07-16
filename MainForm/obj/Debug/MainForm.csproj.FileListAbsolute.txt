@@ -92,12 +92,10 @@ D:\RecentHomework\2017大创\Innovation-of-college\MainForm\obj\Debug\MainForm.p
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\MainForm.exe.config
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\MainForm.exe
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\MainForm.pdb
-D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\Commons.dll
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\Microsoft.Kinect.dll
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\OpenTK.Compatibility.dll
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\OpenTK.dll
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\OpenTK.GLControl.dll
-D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\UcCanvas3D.dll
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\Commons.pdb
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\Microsoft.Kinect.xml
 D:\RecentHomework\2017大创\Innovation-of-college\MainForm\bin\Debug\UcCanvas3D.pdb

@@ -9,32 +9,15 @@ namespace MainForm.Models {
     public class Texture : Frame {
         private int imagewidth, imageheight, texture;
         string path;
-        clsMaterials globalMaterial;
+        GlobalMaterials globalMaterial;
         List<byte> listOfBytes;
 
         public int ImageWidth { get => imagewidth; set => imagewidth = value; }
         public int ImageHeight { get => imageheight; set => imageheight = value; }
 
-        public Texture(string path, clsMaterials material) {
-            this.path = path;
-            globalMaterial = material;
-            FileStream fileStream = new FileStream(path,
-              FileMode.Open);
-            Bitmap bit = new Bitmap(fileStream);
-            ImageHeight = bit.Height;
-            ImageWidth = bit.Width;
-            fileStream.Seek(54, SeekOrigin.Begin);
-            listOfBytes = new List<byte>();
-            int bs;
-            while ((bs = fileStream.ReadByte()) != -1) {
-                listOfBytes.Add((byte)bs);
-            }
-            fileStream.Close();
-        }
-
         public Texture(string path) {
             this.path = path;
-            globalMaterial = new clsMaterials();
+            globalMaterial = new GlobalMaterials();
             FileStream fileStream = new FileStream(path,
               FileMode.Open);
             Bitmap bit = new Bitmap(fileStream);
