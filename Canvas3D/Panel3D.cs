@@ -38,7 +38,11 @@ namespace Canvas3D {
             GL.Flush();
             DrawGame?.Invoke();
             GL.Flush();
-            glControl1.SwapBuffers();
+            try {
+                glControl1.SwapBuffers();
+            } catch {
+
+            }
         }
 
         private void glCanvas_MouseDown(object sender, MouseEventArgs e) {

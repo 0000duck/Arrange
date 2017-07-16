@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Canvas2D.Controls {
-    public class clsControl2D {
+    public class Control2D {
         private Canvas3D.Controls.clsKinect device = Canvas3D.Controls.clsKinect.Device;
         private Body[] tmps;
         GlobalMaterials material;
@@ -40,7 +40,7 @@ namespace Canvas2D.Controls {
 
         public string KeyText { get => keyText; }
 
-        public clsControl2D() {
+        public Control2D() {
             device.FrameArrivedHandler += Frame_Arrived;
             material = new GlobalMaterials();
             rightHand = new Gesture.RightHandLocation(tmps, material);
@@ -67,7 +67,7 @@ namespace Canvas2D.Controls {
         /// <summary>
         /// 析构函数
         /// </summary>
-        ~clsControl2D() {
+        ~Control2D() {
             device.Close();
         }
 

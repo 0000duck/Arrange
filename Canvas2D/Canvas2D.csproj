@@ -62,7 +62,7 @@
     <Compile Include="Gesture\RightHandLocation.cs" />
     <Compile Include="Gesture\WholeJointLocation.cs" />
     <Compile Include="Function\KeyBoardData.cs" />
-    <Compile Include="Kinect\clsControl2D.cs" />
+    <Compile Include="Controls\clsControl2D.cs" />
     <Compile Include="Models\Frame.cs" />
     <Compile Include="Models\Pixel.cs" />
     <Compile Include="Models\Point.cs" />

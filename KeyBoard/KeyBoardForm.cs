@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace KeyBoard {
     public partial class KeyBoardForm : Form {
-        private Canvas2D.Controls.clsControl2D control;
+        private Canvas2D.Controls.Control2D control;
         private Canvas2D.Models.Point point;
         private Canvas2D.Models.Texture texture;
 
         public KeyBoardForm() {
             InitializeComponent();
-            control = new Canvas2D.Controls.clsControl2D();
+            control = new Canvas2D.Controls.Control2D();
             control.drawGameEventHandler += Control_DrawGame;
             point = new Canvas2D.Models.Point(new Vector2(0, 0));
             texture = new Canvas2D.Models.Texture(@"../../../大软键盘.bmp");

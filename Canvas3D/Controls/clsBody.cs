@@ -15,6 +15,11 @@ namespace Canvas3D.Controls {
         private clsBones tuples = clsBones.getTuples();
         private double scale;
 
+        /// <summary>
+        /// 放大倍数
+        /// </summary>
+        public double Scale { get => scale; set => scale = value; }
+
         public clsBody() {
             vectors = new Dictionary<JointType, clsVector3>();
             scale = 100;
@@ -72,14 +77,12 @@ namespace Canvas3D.Controls {
             double length = Sqrt((b.X - a.X) * (b.X - a.X) + (b.Y - a.Y) *
                 (b.Y - a.Y) + (b.Z - a.Z) * (b.Z - a.Z));
             GL.PushMatrix();
-
-
-            GL.Translate(mul(scale, a));
+            GL.Translate(mul(Scale, a));
             Vector3 norm = Vector3.Cross(o, (b - a));
             norm.Normalize();
 
             GL.Rotate(acra, norm.X, norm.Y, norm.Z);
-            Cylinder(pObj, 0.5, 0.5, length * 100, 10, 1);
+            Cylinder(pObj, 0.5, 0.5, length * scale, 10, 1);
             GL.PopMatrix();
             pObj = IntPtr.Zero;
             GL.PopMatrix();

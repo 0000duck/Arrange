@@ -26,29 +26,29 @@ namespace Canvas3D.Controls {
             bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.HipLeft));
 
             //'Right Arm 5
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.ElbowRight));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.WristRight));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.HandRight));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.HandTipRight));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.ThumbRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.ShoulderRight, JointType.ElbowRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.ElbowRight, JointType.WristRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.WristRight, JointType.HandRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.HandRight, JointType.HandTipRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.HandTipRight, JointType.ThumbRight));
 
 
             //'Left Arm 5
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.ElbowLeft));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.WristLeft));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.HandLeft));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.HandTipLeft));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.ThumbLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.ShoulderLeft, JointType.ElbowLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.ElbowLeft, JointType.WristLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.WristLeft, JointType.HandLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.HandLeft, JointType.HandTipLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.HandTipLeft, JointType.ThumbLeft));
 
             //' Right Leg 3
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.KneeRight));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.AnkleRight));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.FootRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.HipRight, JointType.KneeRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.KneeRight, JointType.AnkleRight));
+            bones.Add(new Tuple<JointType, JointType>(JointType.AnkleRight, JointType.FootRight));
 
             //' Left Leg 3
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.KneeLeft));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.AnkleLeft));
-            bones.Add(new Tuple<JointType, JointType>(JointType.SpineBase, JointType.FootLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.HipLeft, JointType.KneeLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.KneeLeft, JointType.AnkleLeft));
+            bones.Add(new Tuple<JointType, JointType>(JointType.AnkleLeft, JointType.FootLeft));
 
 
         }
@@ -62,6 +62,5 @@ namespace Canvas3D.Controls {
         public Tuple<JointType, JointType> getTuple(int i) {
             return bones[i];
         }
-
     }
 }
