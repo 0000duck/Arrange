@@ -17,7 +17,7 @@ namespace Canvas3D.Controls {
 
         public clsBody() {
             vectors = new Dictionary<JointType, clsVector3>();
-            scale = 10;
+            scale = 100;
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Canvas3D.Controls {
             norm.Normalize();
 
             GL.Rotate(acra, norm.X, norm.Y, norm.Z);
-            Cylinder(pObj, 0.1, 0.1, length * 10, 10, 1);
+            Cylinder(pObj, 0.5, 0.5, length * 100, 10, 1);
             GL.PopMatrix();
             pObj = IntPtr.Zero;
             GL.PopMatrix();

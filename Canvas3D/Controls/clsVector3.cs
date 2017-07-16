@@ -41,7 +41,7 @@ namespace Canvas3D.Controls {
         public void Draw() {
             GlobalMaterials.SetMaterial(MaterialType.AxisOrgin);
             IntPtr pObj = NewQuadric();
-            double _SphereRadius = 0.5;
+            double _SphereRadius = 2.5;
             GL.Flush();
             GL.PushMatrix();
             GL.Translate(vec.X * scale, vec.Y * scale, vec.Z * scale);
