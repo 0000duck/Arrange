@@ -37,13 +37,13 @@
     </Reference>
     <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="OpenTK">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.dll</HintPath>
+      <HintPath>..\OpenTK\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK.Compatibility">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.Compatibility.dll</HintPath>
+      <HintPath>..\OpenTK\OpenTK.Compatibility.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK.GLControl">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.GLControl.dll</HintPath>
+      <HintPath>..\OpenTK\OpenTK.GLControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,12 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Control_9Key.cs" />
+    <Compile Include="Function\BoardData_9Key.cs" />
     <Compile Include="Gesture\JointVector.cs" />
     <Compile Include="Gesture\NodeLocation.cs" />
     <Compile Include="Gesture\RightHandLocation.cs" />
     <Compile Include="Gesture\WholeJointLocation.cs" />
     <Compile Include="Function\KeyBoardData.cs" />
-    <Compile Include="Controls\clsControl2D.cs" />
+    <Compile Include="Controls\Control2D.cs" />
     <Compile Include="Models\Frame.cs" />
     <Compile Include="Models\Pixel.cs" />
     <Compile Include="Models\Point.cs" />

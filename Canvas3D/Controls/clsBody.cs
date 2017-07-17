@@ -11,7 +11,7 @@ namespace Canvas3D.Controls {
     /// 单个身体
     /// </summary>
     public class clsBody {
-        private Dictionary<JointType, clsVector3> vectors;//骨骼转化为空间坐标点的字典
+        private Dictionary<JointType, clsVector3> jointsMap;//骨骼转化为空间坐标点的字典
         private clsBones tuples = clsBones.getTuples();
         private double scale;
 
@@ -20,8 +20,10 @@ namespace Canvas3D.Controls {
         /// </summary>
         public double Scale { get => scale; set => scale = value; }
 
+        public Dictionary<JointType, clsVector3> JointsMap { get => jointsMap; }
+
         public clsBody() {
-            vectors = new Dictionary<JointType, clsVector3>();
+            jointsMap = new Dictionary<JointType, clsVector3>();
             scale = 100;
         }
 
@@ -29,15 +31,15 @@ namespace Canvas3D.Controls {
         /// 连接骨骼节点
         /// </summary>
         public void Draw() {
-            foreach (var i in vectors) {
+            foreach (var i in jointsMap) {
                 i.Value.CoordinateTransform();
                 i.Value.Draw();
             }
 
             for (int i = 0; i < clsBones.count - 1; i++) {
                 Tuple<JointType, JointType> tempTuple = tuples.getTuple(i);
-                clsVector3 x = vectors[tempTuple.Item1],//起点
-                y = vectors[tempTuple.Item2];//终点
+                clsVector3 x = jointsMap[tempTuple.Item1],//起点
+                y = jointsMap[tempTuple.Item2];//终点
                 DrawBone(x, y);
             }
         }
@@ -50,8 +52,8 @@ namespace Canvas3D.Controls {
             List<Tuple<clsVector3, clsVector3>> nodeList = new List<Tuple<clsVector3, clsVector3>>();
             for (int i = 0; i < clsBones.count - 1; i++) {
                 Tuple<JointType, JointType> tempTuple = tuples.getTuple(i);
-                nodeList.Add(new Tuple<clsVector3, clsVector3>(vectors[tempTuple.Item1]
-                    , vectors[tempTuple.Item2]));
+                nodeList.Add(new Tuple<clsVector3, clsVector3>(jointsMap[tempTuple.Item1]
+                    , jointsMap[tempTuple.Item2]));
             }
             return nodeList;
         }
@@ -90,7 +92,7 @@ namespace Canvas3D.Controls {
         }
 
         public void Append(Joint j) {
-            vectors.Add(j.JointType, new clsVector3(j.Position));
+            jointsMap.Add(j.JointType, new clsVector3(j.Position));
         }
     }
 }

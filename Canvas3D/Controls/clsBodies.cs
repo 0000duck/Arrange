@@ -7,8 +7,10 @@ namespace Canvas3D.Controls {
     /// <summary>
     /// 多个身体
     /// </summary>
-    class clsBodies {
+    public class clsBodies {
         private List<clsBody> bodies = new List<clsBody>();
+
+        public List<clsBody> BodiesDataQueue { get => bodies; }
 
         public clsBody GetBody(int i) {
             if (bodies != null && i < bodies.Count && i > -1) {

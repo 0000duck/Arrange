@@ -56,13 +56,13 @@
       <HintPath>..\MainForm\bin\Debug\Microsoft.Kinect.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.dll</HintPath>
+      <HintPath>..\OpenTK\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK.Compatibility">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.Compatibility.dll</HintPath>
+      <HintPath>..\OpenTK\OpenTK.Compatibility.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK.GLControl">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.GLControl.dll</HintPath>
+      <HintPath>..\OpenTK\OpenTK.GLControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

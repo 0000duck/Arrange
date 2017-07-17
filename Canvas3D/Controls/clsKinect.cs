@@ -15,7 +15,6 @@ namespace Canvas3D.Controls {
             kSensor = KinectSensor.GetDefault();
             bfReader = kSensor.BodyFrameSource.OpenReader();
             bfReader.FrameArrived += Frame_Arrived;
-
         }
 
         public static clsKinect Device {
@@ -31,13 +30,10 @@ namespace Canvas3D.Controls {
         }
 
         public void Close() {
-            if (bfReader != null)
-                bfReader.Dispose();
-            if (kinect != null) {
-                kSensor.Close();
-                kSensor = null;
-            }
-
+            bfReader?.Dispose();
+            try {
+                kSensor?.Close();
+            } catch { }
             if (kinect != null) {
                 kinect = null;
             }

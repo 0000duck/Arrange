@@ -40,7 +40,7 @@ namespace Canvas2D.Controls {
 
         public string KeyText { get => keyText; }
 
-        public Control2D() {
+        public Control2D() {//TODO: 修改
             device.FrameArrivedHandler += Frame_Arrived;
             material = new GlobalMaterials();
             rightHand = new Gesture.RightHandLocation(tmps, material);
@@ -48,6 +48,15 @@ namespace Canvas2D.Controls {
             sensitivity = 20;
             keyBoard = new Function.KeyBoardData(
                 @"D:\RecentHomework\2017大创\Innovation-of-college\MainForm\SubForms\KeysPosition.xml");
+        }
+
+        public Control2D(string XMLpath) {//TODO: 修改
+            device.FrameArrivedHandler += Frame_Arrived;
+            material = new GlobalMaterials();
+            rightHand = new Gesture.RightHandLocation(tmps, material);
+            track = new Queue<float>();
+            sensitivity = 20;
+            keyBoard = new Function.KeyBoardData(XMLpath);
         }
 
         /// <summary>

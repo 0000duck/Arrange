@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Canvas2D">
-      <HintPath>..\Canvas2D\bin\Debug\Canvas2D.dll</HintPath>
-    </Reference>
     <Reference Include="Commons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Commons\bin\Debug\Commons.dll</HintPath>
@@ -42,15 +39,6 @@
     <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MainForm\bin\Debug\Microsoft.Kinect.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenTK">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenTK.Compatibility">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.Compatibility.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenTK.GLControl">
-      <HintPath>..\MainForm\bin\Debug\OpenTK.GLControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

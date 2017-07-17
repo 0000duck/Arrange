@@ -11,10 +11,12 @@ namespace Canvas3D.Controls {
         private clsBodies bodies;
         private Body[] bodiesAmount;
 
+        /// <summary>
+        /// 数据对外接口
+        /// </summary>
+        public List<clsBody> BodiesDataQueue { get => bodies.BodiesDataQueue; }
 
         private int index = 0;
-
-        public Body[] BodiesAmount { get => BodiesAmount; set => BodiesAmount = value; }
 
         public event Canvas3D.Panel3D.DrawGameHandler DrawGame;
 

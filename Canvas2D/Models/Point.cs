@@ -13,6 +13,8 @@ namespace Canvas2D.Models {
         public float Y { get => point.Y; set => point.Y = value; }
         public float Z { get => point.Z; set => point.Z = value; }
 
+        public Vector3 Location { get => point; set => point = value; }
+
         public override void Draw() {
             IntPtr pObj = OpenTK.Graphics.Glu.NewQuadric();
             double _SphereRadius = 1;
@@ -30,13 +32,6 @@ namespace Canvas2D.Models {
             GL.Enable(EnableCap.DepthTest);
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
             GlobalMaterials.SetMaterial(MaterialType.AxisY);
-
-            //GL.Begin(PrimitiveType.TriangleStrip);
-            //for (int i = 0; i < 30; ++i) {
-            //    GL.Vertex2(R * Math.Cos(2 * Math.PI / 6 * i) + X / 4, R *
-            //        Math.Sin(2 * Math.PI / 6 * i) + Y / 4);
-            //}
-            //GL.End();
             GL.Begin(PrimitiveType.LineStrip);
             GL.Vertex2(X - 3, Y);
             GL.Vertex2(X + 3, Y);
