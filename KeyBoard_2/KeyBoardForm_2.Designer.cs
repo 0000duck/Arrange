@@ -24,21 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeyBoardForm_2));
-            this.panel2D1 = new Canvas3D.Panel2D();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panel2D1 = new Canvas2D.Panel2D();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2D1
-            // 
-            this.panel2D1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2D1.Location = new System.Drawing.Point(0, 0);
-            this.panel2D1.MouseLocation = ((OpenTK.Vector2)(resources.GetObject("panel2D1.MouseLocation")));
-            this.panel2D1.Name = "panel2D1";
-            this.panel2D1.Size = new System.Drawing.Size(282, 253);
-            this.panel2D1.TabIndex = 0;
-            this.panel2D1.DrawGame += new Canvas3D.Panel2D.DrawGameHandler(this.Canvas2D_DrawGame);
             // 
             // statusStrip1
             // 
@@ -56,13 +46,23 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
+            // panel2D1
+            // 
+            this.panel2D1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2D1.Location = new System.Drawing.Point(0, 0);
+            this.panel2D1.MouseLocation = ((OpenTK.Vector2)(resources.GetObject("panel2D1.MouseLocation")));
+            this.panel2D1.Name = "panel2D1";
+            this.panel2D1.Size = new System.Drawing.Size(282, 231);
+            this.panel2D1.TabIndex = 2;
+            this.panel2D1.DrawGame += new Canvas2D.Panel2D.DrawGameHandler(this.Canvas2D_DrawGame);
+            // 
             // KeyBoardForm_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel2D1);
+            this.Controls.Add(this.statusStrip1);
             this.Name = "KeyBoardForm_2";
             this.Text = "Form1";
             this.statusStrip1.ResumeLayout(false);
@@ -73,10 +73,9 @@
         }
 
         #endregion
-
-        private Canvas3D.Panel2D panel2D1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private Canvas2D.Panel2D panel2D1;
     }
 }
 

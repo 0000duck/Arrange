@@ -11,7 +11,7 @@ namespace Canvas2D.Controls {
         private Body[] tmps;
         GlobalMaterials material;
         Gesture.RightHandLocation rightHand;
-        public event Canvas3D.Panel2D.DrawGameHandler drawGameEventHandler;
+        public event Panel2D.DrawGameHandler drawGameEventHandler;
         private string dataInfo;
         private int hitTimes, counter, sensitivity;
         private Queue<float> track;
@@ -43,17 +43,17 @@ namespace Canvas2D.Controls {
         public Control2D() {//TODO: 修改
             device.FrameArrivedHandler += Frame_Arrived;
             material = new GlobalMaterials();
-            rightHand = new Gesture.RightHandLocation(tmps, material);
+            rightHand = new Gesture.RightHandLocation(tmps);
             track = new Queue<float>();
             sensitivity = 20;
             keyBoard = new Function.KeyBoardData(
-                @"D:\RecentHomework\2017大创\Innovation-of-college\MainForm\SubForms\KeysPosition.xml");
+                @"D:\RecentHomework\2017大创\Innovation-of-college\KeyBoard\Resources\KeysPosition.xml");
         }
 
         public Control2D(string XMLpath) {//TODO: 修改
             device.FrameArrivedHandler += Frame_Arrived;
             material = new GlobalMaterials();
-            rightHand = new Gesture.RightHandLocation(tmps, material);
+            rightHand = new Gesture.RightHandLocation(tmps);
             track = new Queue<float>();
             sensitivity = 20;
             keyBoard = new Function.KeyBoardData(XMLpath);

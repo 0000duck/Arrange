@@ -1,4 +1,4 @@
-﻿namespace Canvas3D {
+﻿namespace Canvas2D {
     partial class Panel2D {
         /// <summary>
         /// 必需的设计器变量。

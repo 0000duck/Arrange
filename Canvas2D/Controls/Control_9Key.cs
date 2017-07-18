@@ -4,14 +4,12 @@ using Canvas3D.Controls;
 using Microsoft.Kinect;
 using OpenTK;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace Canvas2D.Controls {
     public class Control_9Key {
         private clsKinect device = clsKinect.Device;
         private Body[] tmps;
         Gesture.RightHandLocation rightHand;
-        private int index = 0;
         public event Canvas3D.Panel3D.DrawGameHandler drawGameEventHandler;
         private string dataInfo;
         private int hitTimes, counter, sensitivity;
@@ -51,36 +49,37 @@ namespace Canvas2D.Controls {
         public Control_9Key() {
             device.FrameArrivedHandler += Frame_Arrived;
             Commons.GlobalMaterials material = new Commons.GlobalMaterials();
-            rightHand = new Gesture.RightHandLocation(tmps, material);
+            rightHand = new Gesture.RightHandLocation(tmps);
             track = new Queue<float>();
             Xtrack = new Queue<float>();
             Ytrack = new Queue<float>();
             sensitivity = 20;
-            //            leftUp= new JointVector();
             keyBoard = new Function.BoardData_9Key(
                 @"D:\RecentHomework\2017大创\temp\Innovation-of-college\MainForm\SubForms\9KeyPosition.xml");
             SingleWave = 0;
             i_pos = j_pos = 0;
-            noticePoint.X = (keyBoard.keys[i_pos][j_pos].LeftUp.X + keyBoard.keys[i_pos][j_pos].RightDown.X) / 2;
-            noticePoint.Y = (keyBoard.keys[i_pos][j_pos].LeftUp.Y + keyBoard.keys[i_pos][j_pos].RightDown.Y) / 2;
+            noticePoint.X = (keyBoard.keys[i_pos][j_pos].LeftUp.X
+                + keyBoard.keys[i_pos][j_pos].RightDown.X) / 2;
+            noticePoint.Y = (keyBoard.keys[i_pos][j_pos].LeftUp.Y
+                + keyBoard.keys[i_pos][j_pos].RightDown.Y) / 2;
             noticePoint.Z = 0;
             Direction = string.Empty;
         }
 
         public Control_9Key(string path) {
             device.FrameArrivedHandler += Frame_Arrived;
-            Commons.GlobalMaterials material = new Commons.GlobalMaterials();
-            rightHand = new Gesture.RightHandLocation(tmps, material);
+            rightHand = new Gesture.RightHandLocation(tmps);
             track = new Queue<float>();
             Xtrack = new Queue<float>();
             Ytrack = new Queue<float>();
             sensitivity = 20;
-            //            leftUp= new JointVector();
             keyBoard = new Function.BoardData_9Key(path);
             SingleWave = 0;
             i_pos = j_pos = 0;
-            noticePoint.X = (keyBoard.keys[i_pos][j_pos].LeftUp.X + keyBoard.keys[i_pos][j_pos].RightDown.X) / 2;
-            noticePoint.Y = (keyBoard.keys[i_pos][j_pos].LeftUp.Y + keyBoard.keys[i_pos][j_pos].RightDown.Y) / 2;
+            noticePoint.X = (keyBoard.keys[i_pos][j_pos].LeftUp.X
+                + keyBoard.keys[i_pos][j_pos].RightDown.X) / 2;
+            noticePoint.Y = (keyBoard.keys[i_pos][j_pos].LeftUp.Y
+                + keyBoard.keys[i_pos][j_pos].RightDown.Y) / 2;
             noticePoint.Z = 0;
             Direction = string.Empty;
         }
@@ -123,7 +122,6 @@ namespace Canvas2D.Controls {
                 if (_body.IsTracked) {
                     IReadOnlyDictionary<JointType, Joint> joints = _body.Joints;
                     drawGameEventHandler();
-                    index += 1;
                 }
             }
         }
@@ -162,7 +160,6 @@ namespace Canvas2D.Controls {
             float tmp = GetVariance(track);
             float xtmp = GetVariance(Xtrack);
             float ytmp = GetVariance(Ytrack);
-            // Debug.WriteLine(tmp);
             // 点击条件
             if (Xtrack.Count > 1) {
                 if (xtmp > sensitivity) {
@@ -198,14 +195,16 @@ namespace Canvas2D.Controls {
                         Ytrack.Clear();
                         SingleWave++;
                         SendSingleKey();//Search函数需要改变
-                        Debug.WriteLine("点击次数" + hitTimes);
                     } else if (SingleWave < 1) {
                         track.Clear();
                         Xtrack.Clear();
                         Ytrack.Clear();
                     }
                 }
-                NoticePoint = new Vector3((keyBoard.keys[i_pos][j_pos].LeftUp.X + keyBoard.keys[i_pos][j_pos].RightDown.X) / 2, (keyBoard.keys[i_pos][j_pos].LeftUp.Y + keyBoard.keys[i_pos][j_pos].RightDown.Y) / 2, 0);
+                NoticePoint = new Vector3((keyBoard.keys[i_pos][j_pos].LeftUp.X
+                    + keyBoard.keys[i_pos][j_pos].RightDown.X) / 2,
+                    (keyBoard.keys[i_pos][j_pos].LeftUp.Y
+                    + keyBoard.keys[i_pos][j_pos].RightDown.Y) / 2, 0);
             }
         }
 

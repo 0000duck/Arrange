@@ -18,3 +18,9 @@ D:\RecentHomework\2017大创\Innovation-of-college\Console\bin\Debug\Microsoft.K
 D:\RecentHomework\2017大创\Innovation-of-college\Console\obj\Debug\Console.exe
 D:\RecentHomework\2017大创\Innovation-of-college\Console\obj\Debug\Console.pdb
 D:\RecentHomework\2017大创\Innovation-of-college\Console\bin\Debug\Commons.pdb
+D:\RecentHomework\2017大创\Innovation-of-college\ConsoleProcess\obj\Debug\ConsoleProcess.csprojResolveAssemblyReference.cache
+D:\RecentHomework\2017大创\Innovation-of-college\ConsoleProcess\obj\Debug\ConsoleProcess.KeyBoardForm.resources
+D:\RecentHomework\2017大创\Innovation-of-college\ConsoleProcess\obj\Debug\ConsoleProcess.TestForm.resources
+D:\RecentHomework\2017大创\Innovation-of-college\ConsoleProcess\obj\Debug\ConsoleProcess.csproj.GenerateResource.Cache
+D:\RecentHomework\2017大创\Innovation-of-college\ConsoleProcess\obj\Debug\Console.exe
+D:\RecentHomework\2017大创\Innovation-of-college\ConsoleProcess\obj\Debug\Console.pdb

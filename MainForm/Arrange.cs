@@ -1,18 +1,19 @@
-﻿using System;
+﻿using Canvas3D.Controls;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
 
 namespace MainForm {
     public partial class Arrange : Form {
-        Models.Strip frame;
+        Canvas2D.Models.Strip frame;
         private clsControl control;
         private double widthRate;
 
         public Arrange() {
             InitializeComponent();
             control = new clsControl();
-            control.drawGameEventHandler += Control_DrawGame;
+            control.DrawGame += Control_DrawGame;
             widthRate = panel3D1.Width / Size.Width;
         }
 
@@ -22,7 +23,7 @@ namespace MainForm {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void On_Models_Adding(object sender, EventArgs e) {
-            frame = new Models.Strip();
+            frame = new Canvas2D.Models.Strip();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "dat文件(*.dat)|*.dat|所有文件(*.*)|*.*";
             openFileDialog.ValidateNames = true;
@@ -88,12 +89,11 @@ namespace MainForm {
         }
 
         private void OnOpeningKeyBoard(object sender, EventArgs e) {
-            SubForms.KeyBoardForm keyboard = new SubForms.KeyBoardForm();
-            keyboard.Show();
+            try {
+                KeyBoard.KeyBoardForm keyboard = new KeyBoard.KeyBoardForm();
+                keyboard.Show();
+            } catch { }
         }
-
-        private void Panel3D_Resize(object sender, EventArgs e) {
-
-        }
+        private void Panel3D_Resize(object sender, EventArgs e) { }
     }
 }

@@ -42,32 +42,22 @@ namespace Canvas2D.Models {
             GL.End();
         }
 
-        public Point(Vector3 p, GlobalMaterials material) {
+        public Point(Vector3 p) {
             point = p;
-            globalMaterial = material;
-            R = 5;
-        }
-
-        public Point(Vector2 p, GlobalMaterials material) {
-            point = new Vector3(p.X, p.Y, 0);
-            globalMaterial = material;
             R = 5;
         }
 
         public Point(Vector2 p) {
             point = new Vector3(p.X, p.Y, 0);
-            globalMaterial = new GlobalMaterials();
             R = 5;
         }
 
         public Point(float x, float y) {
             point = new Vector3(x, y, 0);
-            globalMaterial = new GlobalMaterials();
         }
 
-        public Point(Gesture.JointVector p, GlobalMaterials material) {
+        public Point(Gesture.JointVector p) {
             point = new Vector3(p.X, p.Y, p.Z);
-            globalMaterial = material;
             R = 5;
         }
     }

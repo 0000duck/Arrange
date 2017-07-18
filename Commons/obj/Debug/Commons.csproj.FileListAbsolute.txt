@@ -26,3 +26,4 @@ D:\RecentHomework\2017大创\Innovation-of-college\Commons\obj\Debug\Commons.Pro
 D:\RecentHomework\2017大创\Innovation-of-college\Commons\obj\Debug\Commons.csproj.GenerateResource.Cache
 D:\RecentHomework\2017大创\Innovation-of-college\Commons\obj\Debug\Commons.dll
 D:\RecentHomework\2017大创\Innovation-of-college\Commons\obj\Debug\Commons.pdb
+D:\RecentHomework\2017大创\Innovation-of-college\Commons\obj\Debug\Commons.csprojResolveAssemblyReference.cache

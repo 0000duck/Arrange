@@ -4,7 +4,7 @@ using Commons;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 
-namespace Canvas3D {
+namespace Canvas2D {
     public partial class Panel2D : UserControl {
         public clsOpenGL Opengl;
         public clsVCS3 ViewCS;

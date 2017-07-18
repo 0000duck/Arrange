@@ -1,4 +1,3 @@
-D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\obj\Debug\Canvas3D.Panel2D.resources
 D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\obj\Debug\Canvas2D.csproj.GenerateResource.Cache
 D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\bin\Debug\Canvas2D.dll
 D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\bin\Debug\Canvas2D.pdb
@@ -13,3 +12,4 @@ D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\bin\Debug\Microsoft.
 D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\obj\Debug\Canvas2D.csprojResolveAssemblyReference.cache
 D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\obj\Debug\Canvas2D.dll
 D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\obj\Debug\Canvas2D.pdb
+D:\RecentHomework\2017大创\Innovation-of-college\Canvas2D\obj\Debug\Canvas2D.Panel2D.resources

@@ -31,7 +31,7 @@
             this.开始ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.拍照ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.键盘ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel3D1 = new UcCanvas3D.Panel3D();
+            this.panel3D1 = new Canvas3D.Panel3D();
             this.clsControl2DBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clsControl2DBindingSource)).BeginInit();
@@ -102,12 +102,12 @@
             this.panel3D1.Name = "panel3D1";
             this.panel3D1.Size = new System.Drawing.Size(589, 583);
             this.panel3D1.TabIndex = 1;
-            this.panel3D1.DrawGame += new UcCanvas3D.Panel3D.DrawGameEventHandler(this.Canvas3D_DrawGame);
+            this.panel3D1.DrawGame += new Canvas3D.Panel3D.DrawGameHandler(this.Canvas3D_DrawGame);
             this.panel3D1.Resize += new System.EventHandler(this.Panel3D_Resize);
             // 
             // clsControl2DBindingSource
             // 
-            this.clsControl2DBindingSource.DataSource = typeof(MainForm.Kinect.clsControl2D);
+            this.clsControl2DBindingSource.DataSource = typeof(Canvas2D.Controls.Control2D);
             // 
             // Arrange
             // 
@@ -134,7 +134,7 @@
         private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 清空ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem;
-        private UcCanvas3D.Panel3D panel3D1;
+        private Canvas3D.Panel3D panel3D1;
         private System.Windows.Forms.ToolStripMenuItem 开始ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 拍照ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 键盘ToolStripMenuItem;
